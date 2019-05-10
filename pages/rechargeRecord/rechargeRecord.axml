@@ -1,0 +1,14 @@
+<view class="page">
+  <list>
+    <block a:for="{{items}}">
+      <list-item thumb="{{item.thumb}}"  index="{{index}}" onClick="toDetail" key="{{index}}" last="{{index === (items3.length - 1)}}" multipleLine="{{true}}">					{{item.address}}					
+        <view class="am-list-brief">{{item.paymentTime}}</view>
+        <view class="paidAmount" a:if="{{item.paidAmount}}" slot="extra">						{{item.paidAmount}}					</view>     
+        <view a:if="{{item.paymentTime}}" slot="extra">
+          <view a:if="{{item.paymentId == 3}}">支付宝支付</view>
+          <view a:if="{{item.paymentId == 2}}">微信支付</view>
+          <view a:if="{{item.paymentId == 1}}">余额支付</view>
+        </view>
+    </block>
+  </list>
+</view>

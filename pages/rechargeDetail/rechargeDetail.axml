@@ -1,0 +1,32 @@
+<!--pages/rechargeDetail/rechargeDetail.wxml-->
+<view class='page'>
+  <view class="header">
+    <image src='../../img/icon.png' class='recharge-img'></image>
+    <view class='address'>{{address}}</view>
+    <view class='paidAmount'>{{paidAmount}}.00</view>
+  </view>
+  <view class="cells">
+    <view class="cell">
+      <view class="cell-left">当前状态</view>
+      <view class="cell-right" a:if="{{isPay==1}}">支付成功</view>
+      <view class="cell-right" a:if="{{isPay==0}}">未支付</view>
+    </view>
+    <view class="cell">
+      <view class="cell-left">支付方式</view>
+      <view class="cell-right" a:if="{{paymentId==2}}">微信支付</view>
+      <view class="cell-right" a:if="{{paymentId==3}}">支付宝支付</view>
+    </view>
+    <view class="cell">
+      <view class="cell-left">支付时间</view>
+      <view class="cell-right">{{paymentTime}}</view>
+    </view>
+    <view class="cell">
+      <view class="cell-left">充电时长</view>
+      <view class="cell-right">{{chargeTime}}</view>
+    </view>
+    <view class="cell">
+      <view class="cell-left">充电量</view>
+      <view class="cell-right">{{electricity}}度</view>
+    </view>
+  </view>
+</view>

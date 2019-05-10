@@ -1,0 +1,20 @@
+<view class="stv-container">
+  <view class="tab-bar">
+    <view a:for="{{tabs}}" a:key="unique" data-index=    "{{index}}" onTap="handlerTabTap" class="tab {{activeTab==index?'tab-active':''}}" style="width: {{stv.windowWidth/tabs.length}}px">
+      <text>{{item}}</text>
+    </view>
+    <view style="width: {{stv.lineWidth}}px; left: {{stv.offset/tabs.length}}px" class="under-line {{!stv.tStart? 'withAnimate': ''}}"></view>
+  </view>
+  <view class="scroll-view">
+    <view touchStart="handlerStart" touchMove="handlerMove" touchCancel="handlerCancel" touchEnd="handlerEnd" class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
+      <view style="width: {{stv.windowWidth}}px;" a:for="{{tabs}}" a:key="unique" class="one-scene">
+        <text>{{item}}</text>
+        <view class='footer'>
+          <button class="call weui-btn weui-btn_default">
+            <image src="/img/call.png" class="call-img"></image>          拨打客服
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

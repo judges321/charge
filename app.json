@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personalCenter/personalCenter",
+    "pages/help/help",
+    "pages/rechargeRecord/rechargeRecord",
+    "pages/rechargeDetail/rechargeDetail",
+    "pages/port/port",
+    "pages/chargeState/chargeState"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  }
+}

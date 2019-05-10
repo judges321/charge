@@ -1,0 +1,35 @@
+.radio-group{
+}
+
+.charge-btn{
+  position: absolute;
+  bottom: 5%;
+  left: 28%;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 354rpx;
+  background-color: #1CD0A3;
+  color: #fff;
+  border-radius: 80rpx;
+  box-shadow: 0px 14rpx 40rpx rgba(28,208,163, 0.3)  
+}
+
+.state-fault{
+  color: #E6A23C
+}
+
+.state-working{
+  color: #409EFF
+}
+.state-success{
+  color: #67C23A
+}
+.state-free{
+  color: #909399
+}
+
+.list-center{
+  padding-left: 100rpx;
+  display: inline-block;
+  text-align: center;
+}

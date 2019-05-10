@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "充电插口",
+  "usingComponents": {
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index"
+  }
+}

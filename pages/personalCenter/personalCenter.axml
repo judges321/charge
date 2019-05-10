@@ -1,0 +1,18 @@
+<view class="page">
+  <view class="user">
+    <view class="avatarView">
+      <image class="avatar" src="{{userInfo.avatar}}" />
+    </view>
+    <view class="userinfo">
+      <view class="nickName">{{userInfo.nickName}}</view>
+      <view class="phone">{{userInfo.phone}}</view>
+    </view>
+  </view>
+  <list>
+    <block a:for="{{itemsThumb}}">
+      <list-item thumb="{{item.thumb}}" arrow="{{item.arrow}}" onClick="toRechargeRecord" index="itemsThumb-{{index}}" last="{{index === (itemsThumb.length - 1)}}" key="itemsThumb-{{index}}">					{{item.title}}					
+        <view class="am-list-brief">{{item.brief}}</view>
+      </list-item>
+    </block>
+  </list>  		
+</view>

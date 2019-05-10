@@ -1,0 +1,88 @@
+<!--pages/chargeState/chargeState.wxml-->
+<view class='page'>
+  <view class='location'>
+    <image class='location-img' src="/img/home-location.png"></image>
+    <text class='location-title'>{{chargeList.address}}</text>
+  </view>
+
+  <view class='round-progress'>
+    <canvas class="cir" style="width:212px; height:212px;" id="canvasArc" hidden="{{canvasShow}}"></canvas>
+    <view class="progress">{{chargeProgress}}
+      <text class='percentage'>%</text>
+    </view>
+    <text class='progress-title'>充电进度</text>
+  </view>
+
+  <view class='charge-data'>
+    <view class='cell'>
+      <view class="charge-data-left">充电进度</view>
+      <view class="charge-data-right">
+        <text a:if="{{chargeList.status==2}}">开始充电</text>
+        <text a:if="{{chargeList.status==3}}">正在充电</text>
+        <text a:if="{{chargeList.status==4}}">电已充满</text>
+        <text a:if="{{chargeList.status==5}}">充电结束</text>
+      </view>
+    </view>
+    <view class='cell'>
+      <view class="charge-data-left">充电时间</view>
+      <view class="charge-data-right">{{chargeList.chargeTime}}分</view>
+    </view>
+    <view class='cell'>
+      <view class="charge-data-left">充电量</view>
+      <view class="charge-data-right">{{chargeList.electricity}}度</view>
+    </view>
+
+    <view class='cell'>
+      <view class="charge-data-left">充电价格</view>
+      <view class="charge-data-right">{{chargeList.chargingPrice/100}}
+        <text a:if="{{chargeList.priceMethod==1}}">元/度</text>
+        <text a:if="{{chargeList.priceMethod==2}}">元/小时</text>
+      </view>
+    </view>
+    <view class='cell'>
+      <view class="charge-data-left">充电消费</view>
+      <view class="charge-data-right">{{chargeList.paidAmount/100}}元</view>
+    </view>
+  </view>
+  <button class="end-btn" onTap='endCharge'>结束充电</button>
+  <view class="weui-mask" hidden="{{show}}"></view>
+  <view hidden="{{show}}" class="bill">
+    <image src="/img/cancel.png" class="cancel-img" onTap="hideCharge"></image>
+    <view class="bill-title">
+      <image src="/img/bill.png" class="bill-img"></image>
+      <text class="bill-title">本次账单</text>
+    </view>
+    <view class='bill-cells'>
+      <view class='cell'>
+        <view class="charge-data-left">充电进度</view>
+        <view class="charge-data-right">
+          <text a:if="{{chargeList.status==2}}">开始充电</text>
+          <text a:if="{{chargeList.status==3}}">正在充电</text>
+          <text a:if="{{chargeList.status==4}}">电已充满</text>
+          <text a:if="{{chargeList.status==5}}">充电结束</text>
+        </view>
+      </view>
+      <view class='cell'>
+        <view class="charge-data-left">充电时间</view>
+        <view class="charge-data-right">{{chargeList.chargeTime}}分</view>
+      </view>
+      <view class='cell'>
+        <view class="charge-data-left">充电量</view>
+        <view class="charge-data-right">{{chargeList.electricity}}度</view>
+      </view>
+      <view class='cell'>
+        <view class="charge-data-left">充电价格</view>
+        <view class="charge-data-right">{{chargeList.chargingPrice/100}}
+          <text a:if="{{chargeList.priceMethod==1}}">元/度</text>
+          <text a:if="{{chargeList.priceMethod==2}}">元/小时</text>
+        </view>
+      </view>
+      <view class='cell'>
+        <view class="charge-data-left">充电消费</view>
+        <view class="charge-data-right">{{chargeList.paidAmount/100}}元</view>
+      </view>
+      <!-- <view class='cell'><view class="charge-data-left">账户余额</view><view class="charge-data-right">{{balance}}</view></view> -->
+    </view>
+    <button class="pay-btn" onTap='pay'>去支付</button>
+  </view>
+</view>

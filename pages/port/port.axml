@@ -1,0 +1,25 @@
+<view class="page">
+  <loading a:if="{{startLoading}}">开启中</loading>
+
+  <radio-group class="radio-group" onChange="radioChange">
+  
+<list class="list">
+  <block a:for="{{items}}">
+    <list-item index="{{index}}" key="{{index}}" last="{{index === (items.length - 1)}}">      {{item.value}}        
+      <view class="list-center">
+        <view class="cell-center state-free" a:if="{{item.status===99}}">离线</view>
+        <view class="cell-center state-free" a:if="{{item.status==='00'}}">空闲</view>
+        <view class="cell-center state-working" a:if="{{item.status==='01'}}">工作</view>
+        <view class="cell-center state-fault" a:if="{{item.status==='10'}}">故障</view>
+        <view class="cell-center state-success" a:if="{{item.status==='11'}}">充满</view>        
+      </view>
+      <view slot="extra">   
+        <radio value="{{item.portId}}" checked="{{item.checked}}" disabled="{{item.status!='00'}}"/>
+      </view>
+    </list-item>
+  </block>
+</list>    
+
+    <button class="charge-btn" onTap="startCharge">开始充电</button>
+  </radio-group>
+</view>

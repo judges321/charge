@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="map_container">
+    <map id="map" class="map" latitude="{{currentPos.latitude}}" longitude="{{currentPos.longitude}}" scale="{{scale}}" markers="{{markers}}"        show-location style="width: 100%;height: 100%;"
+    controls="{{controls}}" onControlTap="controltap"
+    ></map>
+    <!-- <image class="user-back" src="/img/index-user.png"></image>
+      <view class="user">
+        <image onTap="toPerson" class="userInfo-avatar" src="{{userInfo.avatar}}"></image>
+      </view> -->
+    <!-- <view onTap="showPos" class="target">
+      <image class="icon" src="/img/index-location.png"></image>
+    </view>
+    <view onTap="scanCode" class="scan">
+      <image class="icon" src="/img/index-scan.png"></image>
+    </view>
+    <view onTap="help" class="help">
+      <image class="icon" src="/img/index-help.png"></image>
+    </view> -->
+  </view>
+</view>

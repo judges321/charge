@@ -1,0 +1,90 @@
+/**index.wxss**/
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map_container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.target {
+  position: absolute;
+  left: 20rpx;
+  bottom: 80rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 50rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.help {
+  position: absolute;
+  right: 20rpx;
+  bottom: 80rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.user {
+  position: absolute;
+  right: 20rpx;
+  top: 42rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.userInfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.user-back {
+  position: absolute;
+  right: 0rpx;
+  top: 24rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.user .icon,.target .icon,.scan .icon,.help .icon {
+  width: 100%;
+  height: 100%;
+}
+
+
+.weui-cells__title{
+  text-align: center;
+  font-size: 36rpx;
+  font-weight:bolder;
+  color: #373737;
+  line-height: 50rpx;
+  height: 50rpx;
+  margin-bottom: 40rpx;
+}
+
+.weui-cell{
+  color: #717070;
+  font-size: 32rpx;
+  padding: 13rpx 0;
+}
+
